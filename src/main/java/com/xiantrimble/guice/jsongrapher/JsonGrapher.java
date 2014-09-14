@@ -2,6 +2,7 @@ package com.xiantrimble.guice.jsongrapher;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.List;
 import java.util.Map;
 
@@ -21,10 +22,10 @@ public class JsonGrapher
 	protected List<InjectorNode> nodes = Lists.newArrayList();
 	protected List<InjectorEdge> edges = Lists.newArrayList();
 	
-	protected PrintWriter out;
+	protected Writer out;
 	protected ObjectMapper mapper = new ObjectMapper();
 	
-	public JsonGrapher withOut( PrintWriter out ) {
+	public JsonGrapher withWriter( Writer out ) {
 		this.out = out;
 		return this;
 	}
